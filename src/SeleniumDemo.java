@@ -17,12 +17,12 @@ public class SeleniumDemo {
       /*  System.setProperty("webdriver.gecko.driver","Drivers/geckodriver.exe");
         WebDriver driver = new FirefoxDriver(); // upcasting*/
 
-       /* System.setProperty("webdriver.opera.driver","Drivers/operadriver.exe");
-        WebDriver driver = new OperaDriver();*/
+       System.setProperty("webdriver.opera.driver","Drivers/operadriver.exe");
+        WebDriver driver = new OperaDriver();
 
-        System.setProperty("webdriver.edge.driver","Drivers/msedgedriver.exe");
+       /* System.setProperty("webdriver.edge.driver","Drivers/msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
-
+*/
 
         driver.manage().window().maximize();
         driver.get("http://naukri.com");
