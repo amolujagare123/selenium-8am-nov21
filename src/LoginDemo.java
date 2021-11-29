@@ -28,6 +28,7 @@ public class LoginDemo {
         lnkAddCustomer.click();
 
         WebElement txtName = driver.findElement(By.id("name"));
+
         txtName.sendKeys("Anjali");
 
         WebElement txtAddress = driver.findElement(By.name("address"));
