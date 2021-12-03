@@ -1,13 +1,14 @@
+package xpathDemos;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LoginDemo {
+public class VIewCustomerDemo {
 
     public static void main(String[] args) {
-
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
@@ -27,20 +28,11 @@ public class LoginDemo {
         WebElement lnkAddCustomer = driver.findElement(By.linkText("Add Customer"));
         lnkAddCustomer.click();
 
-        WebElement txtName = driver.findElement(By.id("name"));
+        driver.findElement(By.xpath("//a[normalize-space()='View Customers']")).click();
 
-        txtName.sendKeys("Anjali");
+        String name="Jamm";
 
-        WebElement txtAddress = driver.findElement(By.name("address"));
-        txtAddress.sendKeys("xyz");
+        driver.findElement(By.xpath("//tr[td[text()='"+name+"']]//input")).click();
 
-        WebElement txtCon1 = driver.findElement(By.name("contact1"));
-        txtCon1.sendKeys("787878");
-
-        WebElement txtCon2 = driver.findElement(By.name("contact2"));
-        txtCon2.sendKeys("787878");
-
-        WebElement txtAdd = driver.findElement(By.name("Submit"));
-        txtAdd.click();
     }
 }

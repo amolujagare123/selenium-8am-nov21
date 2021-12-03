@@ -1,16 +1,21 @@
+package xpathDemos;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SamplePage {
+public class ForgotPass2 {
 
     public static void main(String[] args) {
-
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();
 
-        driver.get("file:///D:/amol%20(1).html");
+        driver.get("https://billing.scriptinglogic.net/");
+
+        driver.findElement(By.xpath("//a[normalize-space()='I forgot my password']")).click();
+
     }
 }
