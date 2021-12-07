@@ -16,14 +16,6 @@ public class LoginWithXpath {
 
         driver.get("https://stock.scriptinglogic.net/");
 
-       /* WebElement txtUsername = driver.findElement(By.xpath("//input[@id='login-username']"));
-        txtUsername.sendKeys("admin");
-
-        WebElement txtPassword = driver.findElement(By.xpath("//input[@type='password']"));
-        txtPassword.sendKeys("admin");
-
-        WebElement btnLogin = driver.findElement(By.xpath("//input[@type='submit']"));
-        btnLogin.click();*/
 
         WebElement txtUsername = driver.findElement(By.xpath("//*[@id='login-username']"));
         txtUsername.sendKeys("admin");
