@@ -24,7 +24,6 @@ public class LoginJunitDemo2 {
     }
 
     @After // method below this annotation will run After every test method
-
     public void closeBrowser()
     {
         driver.close();
