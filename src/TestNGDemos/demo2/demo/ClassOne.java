@@ -1,30 +1,23 @@
-package TestNGDemos.demo;
+package TestNGDemos.demo2.demo;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class ClassOne {
 
-    @BeforeTest
-    public void beforeMyTest()
-    {
-        System.out.println("beforeMyTest");
-    }
-
-    @AfterTest
-    public void afterMyTest()
-    {
-        System.out.println("afterMyTest");
-    }
 
 
+    @Parameters({"myUrl","os"})
     @Test
-    public void classOneTest1()
+    public void classOneTest1(String u1,String oSystem)
     {
+        System.out.println("url="+u1);
+        System.out.println("Os="+oSystem);
         System.out.println("classOneTest1");
     }
-    @Test (groups = "email")
+    @Test
     public void classOneTest2()
     {
         System.out.println("classOneTest2");

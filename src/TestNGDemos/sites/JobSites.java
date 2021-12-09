@@ -1,34 +1,21 @@
 package TestNGDemos.sites;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class JobSites {
-
-   static WebDriver driver;
-
-    @BeforeSuite // method below this annotation will run before first test method of the class
-    public void openBrowser()
-    {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-
-        driver.manage().window().maximize();
-    }
+public class JobSites extends  OpenCloseBrowser{
 
 
-    @AfterSuite// method below this annotation will run after last test method of the class
-    public void closeBrowser()
-    {
-        driver.quit();
-    }
 
     @Test
     public void naukri()
     {
        driver.get("http://naukri.com");
+        Assert.assertEquals(true,false,"Manual fail");
     }
 
     @Test
