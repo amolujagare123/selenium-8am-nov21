@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeSuite;
 
 public class OpenCloseBrowser {
 
-    static WebDriver driver;
+    public static WebDriver driver;
 
     @BeforeSuite // method below this annotation will run before first test method of the class
     public void openBrowser()

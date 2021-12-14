@@ -1,5 +1,7 @@
 package TestNGDemos.demo;
 
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ClassTwo {
@@ -8,6 +10,7 @@ public class ClassTwo {
     public void classTwoTest1()
     {
         System.out.println("classTwoTest1");
+        Assert.assertEquals(true,false,"this test is failed");
     }
     @Test (groups = "email") //(enabled = false)
     public void classTwoTest2()
